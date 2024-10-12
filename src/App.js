@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GlobalStyle from './styles/GlobalStyle';
+import Login from './pages/Login';
+//import Registro from './pages/Registro';
+import Home from './pages/Home';
+import Carrito from './pages/Carrito';
+import Checkout from './pages/Checkout';
+//import PostCheckout from './pages/PostCheckout';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/registro" element={<Registro />} /> */}
+        <Route path="/carrito" element={<Carrito />} />
+        <Route path="/checkout" element={<Checkout />} />
+        {/* <Route path="/confirmacion" element={<PostCheckout />} /> */}
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
