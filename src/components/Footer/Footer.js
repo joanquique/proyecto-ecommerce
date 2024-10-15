@@ -7,11 +7,8 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <FooterLinks>
-          <Link to="/about">Sobre Nosotros</Link>
-          <Link to="/contact">Contacto</Link>
-          <Link to="/terms">Términos y Condiciones</Link>
         </FooterLinks>
-        <p>&copy; {new Date().getFullYear()} MiEcommerce. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Tienda en Línea. Todos los derechos reservados.</p>
       </FooterContent>
     </FooterContainer>
   );

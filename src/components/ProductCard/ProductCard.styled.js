@@ -9,8 +9,9 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 18px;
   transition: box-shadow 0.3s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -39,6 +40,7 @@ export const Title = styled.h3`
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: ${({ theme }) => theme.colors.dark};
+  font-family: 'Montserrat', Arial, sans-serif;
 `;
 
 export const Price = styled.p`
@@ -56,6 +58,7 @@ export const Button = styled.button`
   border-radius: 4px;
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.dark};

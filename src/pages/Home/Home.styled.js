@@ -13,6 +13,8 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
   color: ${({ theme }) => theme.colors.primary};
+  font-family: "Verdana", Arial, Sans-serif;
+  font-size: 26px;
 `;
 
 export const Filters = styled.div`
@@ -30,7 +32,7 @@ export const Filters = styled.div`
 export const Select = styled.select`
   padding: 10px 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 18px;
   font-size: 1rem;
   flex: 1;
 
@@ -47,7 +49,7 @@ export const Select = styled.select`
 export const SearchInput = styled.input`
   padding: 10px 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 18px;
   font-size: 1rem;
   flex: 2;
 

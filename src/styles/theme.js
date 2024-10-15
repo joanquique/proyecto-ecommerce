@@ -9,7 +9,7 @@ export const theme = {
       white: '#ffffff',
     },
     fonts: {
-      main: 'Roboto, sans-serif',
+      main: 'Montserrat, sans-serif',
     },
     breakpoints: {
       mobile: '768px',

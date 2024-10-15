@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #333;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: 10px 20px;
@@ -26,6 +27,9 @@ export const Logo = styled.h1`
 
   a {
     font-weight: bold;
+    font-family: Arial, serif;
+    text-decoration: none;
+    color: #1771e6;
   }
 `;
 
@@ -35,12 +39,14 @@ export const NavLinks = styled.ul`
   align-items: center;
 
   a {
-    color: ${({ theme }) => theme.colors.dark};
+    font-family: Arial, serif;
+    color: #1771e6;;
     font-weight: 500;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
 
     &:hover {
       color: ${({ theme }) => theme.colors.primary};

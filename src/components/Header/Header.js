@@ -30,7 +30,7 @@ const Header = () => {
     <HeaderContainer>
       <Nav>
         <Logo>
-          <Link to="/">MiEcommerce</Link>
+          <Link to="/">Tienda en Línea</Link>
         </Logo>
         <NavLinks>
           <Link to="/">Inicio</Link>
