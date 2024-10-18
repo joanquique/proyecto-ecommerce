@@ -1,20 +1,25 @@
+// src/tests/Carrito.test.js
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Carrito from '../pages/Carrito/Carrito';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from '../redux/slices/cartSlice'; 
+import Carrito from '../pages/Carrito/Carrito'; // Ajusta la ruta según tu estructura de carpetas
 
-describe('Cart component', () => {
-    it('should display the items in the cart', () => {
-        const items = [
-            { id: 1, name: 'Playera', price: 300 },
-            { id: 2, name: 'Sueter', price: 400 },
-        ];
+const store = createStore(rootReducer); // Crea tu store
 
-        render(<Carrito items= {items}/>);
+test('renders carrito with items', () => {
+    const items = [
+        { id: 1, name: 'Producto 1', price: '100' },
+        { id: 2, name: 'Producto 2', price: '200' },
+    ];
 
-        const cartItem = screen.getByText(`${items[0].name}: ${items[0].price}`);
-        expect(cartItem).toBeInDocument();
+    render(
+        <Provider store={store}>
+            <Carrito items={items} />
+        </Provider>
+    );
 
-        const cartItem2 = screen.getByText(`${items[1].name}: ${items[1].price}`);
-        expect(cartItem2).toBeInDocument();
-    })
-})
+    const cartItem = screen.getByText(`${items[0].name}: ${items[0].price}`);
+    expect(cartItem).toBeInTheDocument();
+});

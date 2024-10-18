@@ -44,6 +44,7 @@ export const DetailItem = styled.p`
 export const ProductsList = styled.ul`
   margin-top: 10px;
   margin-bottom: 20px;
+  list-style-type: none;
 `;
 
 export const ProductItem = styled.li`

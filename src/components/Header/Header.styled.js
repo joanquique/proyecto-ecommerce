@@ -35,7 +35,7 @@ export const Logo = styled.h1`
 
   a {
     font-weight: bold;
-    font-family: Arial, serif;
+    font-family: "Montserrat", Arial, serif;
     text-decoration: none;
     color: #1771e6;
   }
