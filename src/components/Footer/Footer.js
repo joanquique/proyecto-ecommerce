@@ -8,7 +8,7 @@ const Footer = () => {
       <FooterContent>
         <FooterLinks>
         </FooterLinks>
-        <p>&copy; {new Date().getFullYear()} Tienda en Línea. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} ShopOnline. Todos los derechos reservados.</p>
       </FooterContent>
     </FooterContainer>
   );
